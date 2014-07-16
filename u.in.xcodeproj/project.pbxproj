@@ -21,6 +21,11 @@
 		3E1ECAB3197650D2000AF544 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1ECA95197650D2000AF544 /* UIKit.framework */; };
 		3E1ECABB197650D2000AF544 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E1ECAB9197650D2000AF544 /* InfoPlist.strings */; };
 		3E1ECABD197650D2000AF544 /* u_inTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ECABC197650D2000AF544 /* u_inTests.m */; };
+		3E1ECAC819765353000AF544 /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ECAC719765353000AF544 /* Users.m */; };
+		3E1ECACD19765473000AF544 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ECACC19765473000AF544 /* FriendsViewController.m */; };
+		3E1ECAD119765598000AF544 /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ECAD019765598000AF544 /* API.m */; };
+		3E1ECAD5197656CE000AF544 /* Contacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ECAD4197656CE000AF544 /* Contacts.m */; };
+		3E1ECAF619765824000AF544 /* libRHAddressBook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1ECAED19765811000AF544 /* libRHAddressBook.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +35,41 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3E1ECA8D197650D2000AF544;
 			remoteInfo = u.in;
+		};
+		3E1ECAEC19765811000AF544 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E1ECAD619765773000AF544 /* RHAddressBook.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 13C9D500146C5A8600327D15;
+			remoteInfo = RHAddressBook;
+		};
+		3E1ECAEE19765811000AF544 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E1ECAD619765773000AF544 /* RHAddressBook.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 13D15189193E7688003B0F45;
+			remoteInfo = RHAddressBook.framework;
+		};
+		3E1ECAF019765811000AF544 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E1ECAD619765773000AF544 /* RHAddressBook.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 133DF0A81470F273005330C7;
+			remoteInfo = RHAddressBookTester;
+		};
+		3E1ECAF219765811000AF544 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E1ECAD619765773000AF544 /* RHAddressBook.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 133DF0931470EE36005330C7;
+			remoteInfo = RHAddressBookLogicTests;
+		};
+		3E1ECAF41976581A000AF544 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E1ECAD619765773000AF544 /* RHAddressBook.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 13C9D4FF146C5A8600327D15;
+			remoteInfo = RHAddressBook;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -53,6 +93,15 @@
 		3E1ECAB8197650D2000AF544 /* u.inTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "u.inTests-Info.plist"; sourceTree = "<group>"; };
 		3E1ECABA197650D2000AF544 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E1ECABC197650D2000AF544 /* u_inTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = u_inTests.m; sourceTree = "<group>"; };
+		3E1ECAC619765353000AF544 /* Users.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Users.h; path = Models/Users.h; sourceTree = "<group>"; };
+		3E1ECAC719765353000AF544 /* Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Users.m; path = Models/Users.m; sourceTree = "<group>"; };
+		3E1ECACB19765473000AF544 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsViewController.h; path = Controllers/FriendsViewController.h; sourceTree = "<group>"; };
+		3E1ECACC19765473000AF544 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsViewController.m; path = Controllers/FriendsViewController.m; sourceTree = "<group>"; };
+		3E1ECACF19765598000AF544 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = API.h; path = Static/API.h; sourceTree = "<group>"; };
+		3E1ECAD019765598000AF544 /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = API.m; path = Static/API.m; sourceTree = "<group>"; };
+		3E1ECAD3197656CE000AF544 /* Contacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contacts.h; sourceTree = "<group>"; };
+		3E1ECAD4197656CE000AF544 /* Contacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contacts.m; sourceTree = "<group>"; };
+		3E1ECAD619765773000AF544 /* RHAddressBook.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RHAddressBook.xcodeproj; path = ../../RHAddressBook/RHAddressBook.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E1ECAF619765824000AF544 /* libRHAddressBook.a in Frameworks */,
 				3E1ECA94197650D2000AF544 /* CoreGraphics.framework in Frameworks */,
 				3E1ECA96197650D2000AF544 /* UIKit.framework in Frameworks */,
 				3E1ECA92197650D2000AF544 /* Foundation.framework in Frameworks */,
@@ -84,6 +134,7 @@
 			children = (
 				3E1ECA97197650D2000AF544 /* u.in */,
 				3E1ECAB6197650D2000AF544 /* u.inTests */,
+				3E1ECAE5197657AC000AF544 /* Vendor */,
 				3E1ECA90197650D2000AF544 /* Frameworks */,
 				3E1ECA8F197650D2000AF544 /* Products */,
 			);
@@ -115,8 +166,10 @@
 				3E1ECAA0197650D2000AF544 /* AppDelegate.h */,
 				3E1ECAA1197650D2000AF544 /* AppDelegate.m */,
 				3E1ECAA3197650D2000AF544 /* Main.storyboard */,
-				3E1ECAA6197650D2000AF544 /* ViewController.h */,
-				3E1ECAA7197650D2000AF544 /* ViewController.m */,
+				3E1ECACA197653F5000AF544 /* Abstract */,
+				3E1ECAC91976535E000AF544 /* Models */,
+				3E1ECACE197654B8000AF544 /* Controllers */,
+				3E1ECAD21976559E000AF544 /* Static */,
 				3E1ECAA9197650D2000AF544 /* Images.xcassets */,
 				3E1ECA98197650D2000AF544 /* Supporting Files */,
 			);
@@ -152,6 +205,64 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3E1ECAC91976535E000AF544 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3E1ECAC619765353000AF544 /* Users.h */,
+				3E1ECAC719765353000AF544 /* Users.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		3E1ECACA197653F5000AF544 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				3E1ECAA6197650D2000AF544 /* ViewController.h */,
+				3E1ECAA7197650D2000AF544 /* ViewController.m */,
+			);
+			name = Abstract;
+			sourceTree = "<group>";
+		};
+		3E1ECACE197654B8000AF544 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3E1ECACB19765473000AF544 /* FriendsViewController.h */,
+				3E1ECACC19765473000AF544 /* FriendsViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3E1ECAD21976559E000AF544 /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				3E1ECACF19765598000AF544 /* API.h */,
+				3E1ECAD019765598000AF544 /* API.m */,
+				3E1ECAD3197656CE000AF544 /* Contacts.h */,
+				3E1ECAD4197656CE000AF544 /* Contacts.m */,
+			);
+			name = Static;
+			sourceTree = "<group>";
+		};
+		3E1ECAE5197657AC000AF544 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				3E1ECAD619765773000AF544 /* RHAddressBook.xcodeproj */,
+			);
+			name = Vendor;
+			path = u.in;
+			sourceTree = "<group>";
+		};
+		3E1ECAE619765811000AF544 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E1ECAED19765811000AF544 /* libRHAddressBook.a */,
+				3E1ECAEF19765811000AF544 /* RHAddressBook.framework */,
+				3E1ECAF119765811000AF544 /* RHAddressBookTester.app */,
+				3E1ECAF319765811000AF544 /* RHAddressBookLogicTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,6 +277,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3E1ECAF51976581A000AF544 /* PBXTargetDependency */,
 			);
 			name = u.in;
 			productName = u.in;
@@ -215,6 +327,12 @@
 			mainGroup = 3E1ECA85197650D2000AF544;
 			productRefGroup = 3E1ECA8F197650D2000AF544 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3E1ECAE619765811000AF544 /* Products */;
+					ProjectRef = 3E1ECAD619765773000AF544 /* RHAddressBook.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3E1ECA8D197650D2000AF544 /* u.in */,
@@ -222,6 +340,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3E1ECAED19765811000AF544 /* libRHAddressBook.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRHAddressBook.a;
+			remoteRef = 3E1ECAEC19765811000AF544 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3E1ECAEF19765811000AF544 /* RHAddressBook.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RHAddressBook.framework;
+			remoteRef = 3E1ECAEE19765811000AF544 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3E1ECAF119765811000AF544 /* RHAddressBookTester.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = RHAddressBookTester.app;
+			remoteRef = 3E1ECAF019765811000AF544 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3E1ECAF319765811000AF544 /* RHAddressBookLogicTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RHAddressBookLogicTests.xctest;
+			remoteRef = 3E1ECAF219765811000AF544 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3E1ECA8C197650D2000AF544 /* Resources */ = {
@@ -249,9 +398,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E1ECAD119765598000AF544 /* API.m in Sources */,
+				3E1ECACD19765473000AF544 /* FriendsViewController.m in Sources */,
+				3E1ECAC819765353000AF544 /* Users.m in Sources */,
 				3E1ECAA8197650D2000AF544 /* ViewController.m in Sources */,
 				3E1ECAA2197650D2000AF544 /* AppDelegate.m in Sources */,
 				3E1ECA9E197650D2000AF544 /* main.m in Sources */,
+				3E1ECAD5197656CE000AF544 /* Contacts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +423,11 @@
 			isa = PBXTargetDependency;
 			target = 3E1ECA8D197650D2000AF544 /* u.in */;
 			targetProxy = 3E1ECAB4197650D2000AF544 /* PBXContainerItemProxy */;
+		};
+		3E1ECAF51976581A000AF544 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RHAddressBook;
+			targetProxy = 3E1ECAF41976581A000AF544 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -378,7 +536,16 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "u.in/u.in-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"include/**",
+				);
 				INFOPLIST_FILE = "u.in/u.in-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -391,7 +558,16 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "u.in/u.in-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"include/**",
+				);
 				INFOPLIST_FILE = "u.in/u.in-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -456,6 +632,7 @@
 				3E1ECAC2197650D2000AF544 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E1ECAC3197650D2000AF544 /* Build configuration list for PBXNativeTarget "u.inTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +641,7 @@
 				3E1ECAC5197650D2000AF544 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

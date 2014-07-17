@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - u in?-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" sceneMemberID="viewController">
@@ -25,11 +25,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jjf-nW-uh4" kind="push" id="HKM-qh-hIt"/>
+                                    <segue destination="e6e-Fs-fwO" kind="push" id="GMO-IX-RgM"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9av-WY-7e4">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="471"/>
+                                <rect key="frame" x="0.0" y="65" width="320" height="406"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -47,16 +47,72 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uvL-6n-zM6" firstAttribute="top" secondItem="9av-WY-7e4" secondAttribute="bottom" constant="8" id="AeC-Hd-Imz"/>
+                            <constraint firstItem="9av-WY-7e4" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="1" id="RL4-zh-3VK"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="uvL-6n-zM6" secondAttribute="bottom" constant="10" id="ZdP-UA-Qva"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Jw4-Ow-ZZb"/>
+                    <navigationItem key="navigationItem" title="u in?" id="Jw4-Ow-ZZb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="KrJ-tv-RsC"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="979" y="-152"/>
         </scene>
-        <!--Friends View Controller-->
+        <!--View Controller - New Event-->
+        <scene sceneID="ZuY-RX-Yd2">
+            <objects>
+                <viewController id="e6e-Fs-fwO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9No-9K-AOr"/>
+                        <viewControllerLayoutGuide type="bottom" id="VNH-bc-I2o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cyc-lW-lQ7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31x-kV-YoV">
+                                <rect key="frame" x="20" y="130" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPA-DA-KdZ">
+                                <rect key="frame" x="20" y="269" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35274748579999998" green="0.51626909139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Select Friends">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" text="Hey, Jamestown and I are thinking of heading over  to AX booth 111. u in? Click to edit..." translatesAutoresizingMaskIntoConstraints="NO" id="jCS-6V-StW">
+                                <rect key="frame" x="76" y="74" width="224" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94248246173469385" green="0.94248246173469385" blue="0.94248246173469385" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="zPA-DA-KdZ" secondAttribute="centerY" id="44y-CO-QwD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Event" id="QoK-jG-2Cl">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="4WL-Jh-C6b">
+                            <connections>
+                                <segue destination="jjf-nW-uh4" kind="push" id="fIs-6Z-0gA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KpY-vf-SrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1460" y="-152"/>
+        </scene>
+        <!--Friends View Controller - Friends-->
         <scene sceneID="rzY-aN-wOm">
             <objects>
                 <viewController id="jjf-nW-uh4" customClass="FriendsViewController" sceneMemberID="viewController">
@@ -106,14 +162,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7jB-qA-dfP"/>
+                    <navigationItem key="navigationItem" title="Friends" id="7jB-qA-dfP">
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="ddg-G0-EkT"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="t2k-BE-ugn" id="dX6-Kg-KaL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcb-BI-jUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1396" y="-152"/>
+            <point key="canvasLocation" x="1918" y="-152"/>
         </scene>
         <!--View Controller - Add Friends-->
         <scene sceneID="9OQ-d4-52i">
@@ -128,14 +186,38 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y85-H0-4er">
-                                <rect key="frame" x="54" y="269" width="213" height="30"/>
+                                <rect key="frame" x="54" y="307" width="213" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35274748579999998" green="0.51626909139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Add from Contacts">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="Soa-WC-XZj" kind="push" id="Zy9-GN-2sm"/>
                                 </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- or -" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISK-1G-goA">
+                                <rect key="frame" x="139" y="278" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6D-c3-A52">
+                                <rect key="frame" x="49" y="202" width="213" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUS-4b-y0P">
+                                <rect key="frame" x="54" y="240" width="213" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35274748579999998" green="0.51626909139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add Friend">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

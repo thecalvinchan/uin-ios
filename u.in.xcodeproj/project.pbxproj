@@ -39,6 +39,10 @@
 		3ECC6DA81977A2310017F252 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6DA71977A2310017F252 /* Social.framework */; };
 		3ECC6DAA1977A2370017F252 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6DA91977A2370017F252 /* StoreKit.framework */; };
 		3ECC6DAC1977A23E0017F252 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6DAB1977A23E0017F252 /* SystemConfiguration.framework */; };
+		3ECC6DAF1977A4040017F252 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DAE1977A4040017F252 /* MainTabBarController.m */; };
+		3ECC6DB21977A4820017F252 /* LogInController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DB11977A4820017F252 /* LogInController.m */; };
+		3ECC6DB51977A4C80017F252 /* SignUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DB41977A4C80017F252 /* SignUpController.m */; };
+		3ECC6DB71977A5B40017F252 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6DB61977A5B40017F252 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +133,13 @@
 		3ECC6DA71977A2310017F252 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		3ECC6DA91977A2370017F252 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		3ECC6DAB1977A23E0017F252 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3ECC6DAD1977A4040017F252 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		3ECC6DAE1977A4040017F252 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		3ECC6DB01977A4820017F252 /* LogInController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogInController.h; path = Controllers/LogInController.h; sourceTree = "<group>"; };
+		3ECC6DB11977A4820017F252 /* LogInController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogInController.m; path = Controllers/LogInController.m; sourceTree = "<group>"; };
+		3ECC6DB31977A4C80017F252 /* SignUpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignUpController.h; path = Controllers/SignUpController.h; sourceTree = "<group>"; };
+		3ECC6DB41977A4C80017F252 /* SignUpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignUpController.m; path = Controllers/SignUpController.m; sourceTree = "<group>"; };
+		3ECC6DB61977A5B40017F252 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +155,7 @@
 				3ECC6DA21977A2100017F252 /* MobileCoreServices.framework in Frameworks */,
 				3ECC6DA01977A2050017F252 /* libz.dylib in Frameworks */,
 				3ECC6D9E1977A1FB0017F252 /* CoreLocation.framework in Frameworks */,
+				3ECC6DB71977A5B40017F252 /* FacebookSDK.framework in Frameworks */,
 				3E1ECA94197650D2000AF544 /* CoreGraphics.framework in Frameworks */,
 				3ECC6D9C1977A1EF0017F252 /* CFNetwork.framework in Frameworks */,
 				3ECC6D9A1977A1E90017F252 /* AudioToolbox.framework in Frameworks */,
@@ -191,6 +203,7 @@
 		3E1ECA90197650D2000AF544 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3ECC6DB61977A5B40017F252 /* FacebookSDK.framework */,
 				3ECC6DAB1977A23E0017F252 /* SystemConfiguration.framework */,
 				3ECC6DA91977A2370017F252 /* StoreKit.framework */,
 				3ECC6DA71977A2310017F252 /* Social.framework */,
@@ -217,6 +230,8 @@
 				3E1ECAA0197650D2000AF544 /* AppDelegate.h */,
 				3E1ECAA1197650D2000AF544 /* AppDelegate.m */,
 				3E1ECAA3197650D2000AF544 /* Main.storyboard */,
+				3ECC6DAD1977A4040017F252 /* MainTabBarController.h */,
+				3ECC6DAE1977A4040017F252 /* MainTabBarController.m */,
 				3E1ECACA197653F5000AF544 /* Abstract */,
 				3E1ECAC91976535E000AF544 /* Models */,
 				3E1ECACE197654B8000AF544 /* Controllers */,
@@ -281,6 +296,10 @@
 				3E1ECACC19765473000AF544 /* FriendsViewController.m */,
 				3E1ECAF719765C8E000AF544 /* ContactsViewController.h */,
 				3E1ECAF819765C8E000AF544 /* ContactsViewController.m */,
+				3ECC6DB01977A4820017F252 /* LogInController.h */,
+				3ECC6DB11977A4820017F252 /* LogInController.m */,
+				3ECC6DB31977A4C80017F252 /* SignUpController.h */,
+				3ECC6DB41977A4C80017F252 /* SignUpController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -453,10 +472,13 @@
 			files = (
 				3E1ECAD119765598000AF544 /* API.m in Sources */,
 				3E1ECAF919765C8E000AF544 /* ContactsViewController.m in Sources */,
+				3ECC6DAF1977A4040017F252 /* MainTabBarController.m in Sources */,
 				3E1ECACD19765473000AF544 /* FriendsViewController.m in Sources */,
 				3E1ECAC819765353000AF544 /* Users.m in Sources */,
+				3ECC6DB21977A4820017F252 /* LogInController.m in Sources */,
 				3E1ECAA8197650D2000AF544 /* TableViewController.m in Sources */,
 				3E1ECAA2197650D2000AF544 /* AppDelegate.m in Sources */,
+				3ECC6DB51977A4C80017F252 /* SignUpController.m in Sources */,
 				3E1ECA9E197650D2000AF544 /* main.m in Sources */,
 				3E1ECAD5197656CE000AF544 /* Contacts.m in Sources */,
 			);
@@ -591,6 +613,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/Calvin/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "u.in/u.in-Prefix.pch";
@@ -618,6 +641,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/Calvin/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "u.in/u.in-Prefix.pch";

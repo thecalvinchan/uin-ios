@@ -14,7 +14,7 @@
 		3E1ECA9E197650D2000AF544 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ECA9D197650D2000AF544 /* main.m */; };
 		3E1ECAA2197650D2000AF544 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ECAA1197650D2000AF544 /* AppDelegate.m */; };
 		3E1ECAA5197650D2000AF544 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E1ECAA3197650D2000AF544 /* Main.storyboard */; };
-		3E1ECAA8197650D2000AF544 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ECAA7197650D2000AF544 /* ViewController.m */; };
+		3E1ECAA8197650D2000AF544 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ECAA7197650D2000AF544 /* TableViewController.m */; };
 		3E1ECAAA197650D2000AF544 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E1ECAA9197650D2000AF544 /* Images.xcassets */; };
 		3E1ECAB1197650D2000AF544 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1ECAB0197650D2000AF544 /* XCTest.framework */; };
 		3E1ECAB2197650D2000AF544 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1ECA91197650D2000AF544 /* Foundation.framework */; };
@@ -26,6 +26,7 @@
 		3E1ECAD119765598000AF544 /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ECAD019765598000AF544 /* API.m */; };
 		3E1ECAD5197656CE000AF544 /* Contacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ECAD4197656CE000AF544 /* Contacts.m */; };
 		3E1ECAF619765824000AF544 /* libRHAddressBook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1ECAED19765811000AF544 /* libRHAddressBook.a */; };
+		3E1ECAF919765C8E000AF544 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ECAF819765C8E000AF544 /* ContactsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +86,8 @@
 		3E1ECAA0197650D2000AF544 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3E1ECAA1197650D2000AF544 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3E1ECAA4197650D2000AF544 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3E1ECAA6197650D2000AF544 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3E1ECAA7197650D2000AF544 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3E1ECAA6197650D2000AF544 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = Abstract/TableViewController.h; sourceTree = "<group>"; };
+		3E1ECAA7197650D2000AF544 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = Abstract/TableViewController.m; sourceTree = "<group>"; };
 		3E1ECAA9197650D2000AF544 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3E1ECAAF197650D2000AF544 /* u.inTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = u.inTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E1ECAB0197650D2000AF544 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -99,9 +100,11 @@
 		3E1ECACC19765473000AF544 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsViewController.m; path = Controllers/FriendsViewController.m; sourceTree = "<group>"; };
 		3E1ECACF19765598000AF544 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = API.h; path = Static/API.h; sourceTree = "<group>"; };
 		3E1ECAD019765598000AF544 /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = API.m; path = Static/API.m; sourceTree = "<group>"; };
-		3E1ECAD3197656CE000AF544 /* Contacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contacts.h; sourceTree = "<group>"; };
-		3E1ECAD4197656CE000AF544 /* Contacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contacts.m; sourceTree = "<group>"; };
+		3E1ECAD3197656CE000AF544 /* Contacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contacts.h; path = Static/Contacts.h; sourceTree = "<group>"; };
+		3E1ECAD4197656CE000AF544 /* Contacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contacts.m; path = Static/Contacts.m; sourceTree = "<group>"; };
 		3E1ECAD619765773000AF544 /* RHAddressBook.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RHAddressBook.xcodeproj; path = ../../RHAddressBook/RHAddressBook.xcodeproj; sourceTree = "<group>"; };
+		3E1ECAF719765C8E000AF544 /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactsViewController.h; path = Controllers/ContactsViewController.h; sourceTree = "<group>"; };
+		3E1ECAF819765C8E000AF544 /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactsViewController.m; path = Controllers/ContactsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,8 +220,8 @@
 		3E1ECACA197653F5000AF544 /* Abstract */ = {
 			isa = PBXGroup;
 			children = (
-				3E1ECAA6197650D2000AF544 /* ViewController.h */,
-				3E1ECAA7197650D2000AF544 /* ViewController.m */,
+				3E1ECAA6197650D2000AF544 /* TableViewController.h */,
+				3E1ECAA7197650D2000AF544 /* TableViewController.m */,
 			);
 			name = Abstract;
 			sourceTree = "<group>";
@@ -228,6 +231,8 @@
 			children = (
 				3E1ECACB19765473000AF544 /* FriendsViewController.h */,
 				3E1ECACC19765473000AF544 /* FriendsViewController.m */,
+				3E1ECAF719765C8E000AF544 /* ContactsViewController.h */,
+				3E1ECAF819765C8E000AF544 /* ContactsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -399,9 +404,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E1ECAD119765598000AF544 /* API.m in Sources */,
+				3E1ECAF919765C8E000AF544 /* ContactsViewController.m in Sources */,
 				3E1ECACD19765473000AF544 /* FriendsViewController.m in Sources */,
 				3E1ECAC819765353000AF544 /* Users.m in Sources */,
-				3E1ECAA8197650D2000AF544 /* ViewController.m in Sources */,
+				3E1ECAA8197650D2000AF544 /* TableViewController.m in Sources */,
 				3E1ECAA2197650D2000AF544 /* AppDelegate.m in Sources */,
 				3E1ECA9E197650D2000AF544 /* main.m in Sources */,
 				3E1ECAD5197656CE000AF544 /* Contacts.m in Sources */,

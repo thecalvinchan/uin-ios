@@ -7,7 +7,7 @@
 //
 
 #import "Contacts.h"
-#import "Models/Users.h"
+#import "../Models/Users.h"
 #import <RHAddressBook/AddressBook.h>
 
 @implementation Contacts
@@ -27,8 +27,12 @@
         Users *user = [[Users alloc] init];
         user.firstName = [person firstName];
         user.lastName = [person lastName];
-        user.phoneNumbers = (NSArray *)[person phoneNumbers];
-        // TODO: use NSObject hash method...
+        RHMultiValue *addressbook = [person phoneNumbers];
+        NSMutableArray *numbers = [[NSMutableArray alloc] init];
+        for (int i=0; i<[addressbook count]; i++) {
+            [numbers addObject:[addressbook valueAtIndex:i]];
+        }
+        user.phoneNumbers = numbers;
         NSString *hash = [user returnUserHash];
         if (hash) {
             [contacts setObject:user forKey:hash];

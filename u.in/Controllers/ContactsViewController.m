@@ -1,23 +1,24 @@
 //
-//  FriendsViewController.m
+//  ContactsViewController.m
 //  u.in
 //
 //  Created by Calvin on 7/16/14.
 //  Copyright (c) 2014 Calvin Chan. All rights reserved.
 //
 
-#import "FriendsViewController.h"
+#import "ContactsViewController.h"
+#import "../Static/Contacts.h"
 
-@interface FriendsViewController ()
+@interface ContactsViewController ()
 
 @end
 
-@implementation FriendsViewController
+@implementation ContactsViewController
 
 // ABSTRACT OVERRIDE
 
 - (NSDictionary *)loadTableData {
-    return nil;
+    return [Contacts returnContactsForCurrentUser];
 }
 
 // END ABSTRACT OVERRIDE

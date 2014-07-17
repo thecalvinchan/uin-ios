@@ -1,17 +1,13 @@
 //
-//  API.m
+//  ContactsViewController.h
 //  u.in
 //
 //  Created by Calvin on 7/16/14.
 //  Copyright (c) 2014 Calvin Chan. All rights reserved.
 //
 
-#import "API.h"
+#import "TableViewController.h"
 
-@implementation API
-
-+ (NSMutableArray *)returnFriendsForCurrentUser {
-    return nil;
-}
+@interface ContactsViewController : TableViewController
 
 @end

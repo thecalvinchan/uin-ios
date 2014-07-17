@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Calvin Chan. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TableViewController.h"
 
-@interface FriendsViewController : ViewController
+@interface FriendsViewController : TableViewController
 
 @end

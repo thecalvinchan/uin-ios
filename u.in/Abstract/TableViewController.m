@@ -6,18 +6,18 @@
 //  Copyright (c) 2014 Calvin Chan. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "Models/Users.h"
+#import "TableViewController.h"
+#import "../Models/Users.h"
 
-@interface ViewController ()
-@property (strong, nonatomic) NSMutableArray *tableData;
+@interface TableViewController ()
+@property (strong, nonatomic) NSDictionary *tableData;
 @end
 
-@implementation ViewController
+@implementation TableViewController
 
 // ABSTRACT
 
-- (NSMutableArray *)loadTableData {
+- (NSDictionary *)loadTableData {
     return nil;
 }
 
@@ -51,6 +51,14 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
+    Users *friend = [self.tableData valueForKey:[self.tableData allKeys][indexPath.row]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", friend.firstName, friend.lastName ];
+    if ([friend.phoneNumbers count] > 0) {
+        cell.detailTextLabel.text = friend.phoneNumbers[0];
+    } else {
+        cell.detailTextLabel.text = @"";
+    }
+    
     return cell;
 }
 

@@ -7,9 +7,10 @@
 //
 
 #import "FriendsViewController.h"
+#import "../Static/API.h"
 
 @interface FriendsViewController ()
-
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation FriendsViewController
@@ -17,7 +18,7 @@
 // ABSTRACT OVERRIDE
 
 - (NSDictionary *)loadTableData {
-    return nil;
+    return [API returnFriendsForCurrentUser];
 }
 
 // END ABSTRACT OVERRIDE

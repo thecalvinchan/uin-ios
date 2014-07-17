@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-
+@property (strong, nonatomic) NSDictionary *tableData;
 @end

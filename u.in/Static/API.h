@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface API : NSObject
-+ (NSMutableArray *)returnFriendsForCurrentUser;
++ (NSDictionary *)returnFriendsForCurrentUser;
 @end

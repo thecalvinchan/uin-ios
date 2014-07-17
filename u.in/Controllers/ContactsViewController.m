@@ -8,9 +8,10 @@
 
 #import "ContactsViewController.h"
 #import "../Static/Contacts.h"
+#import "../Models/Users.h"
 
 @interface ContactsViewController ()
-
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation ContactsViewController
@@ -33,6 +34,36 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)addContactsToFriends:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *hashlist = [[defaults objectForKey:@"hash"] mutableCopy];
+    if ([hashlist count] <=0) {
+        hashlist = [[NSMutableArray alloc] init];
+    }
+    for (NSInteger j = 0; j < [self.tableView numberOfSections]; ++j)
+    {
+        for (NSInteger i = 0; i < [self.tableView numberOfRowsInSection:j]; ++i)
+        {
+            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:j]];
+            if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
+                NSString *hash = [NSString stringWithFormat: @"%@ %@", cell.textLabel.text, cell.detailTextLabel.text];
+                Users *person = [self.tableData objectForKey:hash];
+                [defaults setObject:[person returnDictRepresentation] forKey:hash];
+                if (![hashlist containsObject:hash]) {
+                    [hashlist addObject:hash];
+                }
+            }
+        }
+    }
+    [defaults setObject:(NSArray *)hashlist forKey:@"hash"];
+    [defaults synchronize];
+    NSLog(@"nsuserdefaults");
+    //NSLog(hashlist);
+    for (NSString *hash in hashlist) {
+        //NSLog([NSString stringWithFormat:@"%@ => %@", hash, [defaults objectForKey:hash] ]);
+    }
 }
 
 /*

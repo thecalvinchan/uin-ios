@@ -7,11 +7,19 @@
 //
 
 #import "API.h"
+#import "../Models/Users.h"
 
 @implementation API
 
-+ (NSMutableArray *)returnFriendsForCurrentUser {
-    return nil;
++ (NSDictionary *)returnFriendsForCurrentUser {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableDictionary *friends = [[NSMutableDictionary alloc] init];
+    NSArray *hashlist = [defaults objectForKey:@"hash"];
+    for (NSString *hash in hashlist) {
+        Users *friend = [[Users alloc] initWithDict:[defaults objectForKey:hash]];
+        [friends setObject:friend forKey:hash];
+    }
+    return friends;
 }
 
 @end

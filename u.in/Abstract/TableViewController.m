@@ -10,7 +10,6 @@
 #import "../Models/Users.h"
 
 @interface TableViewController ()
-@property (strong, nonatomic) NSDictionary *tableData;
 @end
 
 @implementation TableViewController
@@ -51,7 +50,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    Users *friend = [self.tableData valueForKey:[self.tableData allKeys][indexPath.row]];
+    NSArray *keys = [self.tableData allKeys];
+    Users *friend = [self.tableData valueForKey:keys[indexPath.row]];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", friend.firstName, friend.lastName ];
     if ([friend.phoneNumbers count] > 0) {
         cell.detailTextLabel.text = friend.phoneNumbers[0];
@@ -60,6 +60,15 @@
     }
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if (cell.accessoryType == UITableViewCellAccessoryNone) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
 }
 
 @end

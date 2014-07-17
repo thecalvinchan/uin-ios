@@ -27,6 +27,18 @@
 		3E1ECAD5197656CE000AF544 /* Contacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ECAD4197656CE000AF544 /* Contacts.m */; };
 		3E1ECAF619765824000AF544 /* libRHAddressBook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1ECAED19765811000AF544 /* libRHAddressBook.a */; };
 		3E1ECAF919765C8E000AF544 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ECAF819765C8E000AF544 /* ContactsViewController.m */; };
+		3ECC6D961977A1C20017F252 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6D951977A1C20017F252 /* Parse.framework */; };
+		3ECC6D981977A1E10017F252 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6D971977A1E10017F252 /* Accounts.framework */; };
+		3ECC6D9A1977A1E90017F252 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6D991977A1E90017F252 /* AudioToolbox.framework */; };
+		3ECC6D9C1977A1EF0017F252 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6D9B1977A1EF0017F252 /* CFNetwork.framework */; };
+		3ECC6D9E1977A1FB0017F252 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6D9D1977A1FB0017F252 /* CoreLocation.framework */; };
+		3ECC6DA01977A2050017F252 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6D9F1977A2050017F252 /* libz.dylib */; };
+		3ECC6DA21977A2100017F252 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6DA11977A2100017F252 /* MobileCoreServices.framework */; };
+		3ECC6DA41977A2170017F252 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6DA31977A2170017F252 /* QuartzCore.framework */; };
+		3ECC6DA61977A2220017F252 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6DA51977A2220017F252 /* Security.framework */; };
+		3ECC6DA81977A2310017F252 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6DA71977A2310017F252 /* Social.framework */; };
+		3ECC6DAA1977A2370017F252 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6DA91977A2370017F252 /* StoreKit.framework */; };
+		3ECC6DAC1977A23E0017F252 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6DAB1977A23E0017F252 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +117,18 @@
 		3E1ECAD619765773000AF544 /* RHAddressBook.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RHAddressBook.xcodeproj; path = ../../RHAddressBook/RHAddressBook.xcodeproj; sourceTree = "<group>"; };
 		3E1ECAF719765C8E000AF544 /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactsViewController.h; path = Controllers/ContactsViewController.h; sourceTree = "<group>"; };
 		3E1ECAF819765C8E000AF544 /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactsViewController.m; path = Controllers/ContactsViewController.m; sourceTree = "<group>"; };
+		3ECC6D951977A1C20017F252 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		3ECC6D971977A1E10017F252 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		3ECC6D991977A1E90017F252 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3ECC6D9B1977A1EF0017F252 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3ECC6D9D1977A1FB0017F252 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3ECC6D9F1977A2050017F252 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		3ECC6DA11977A2100017F252 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3ECC6DA31977A2170017F252 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3ECC6DA51977A2220017F252 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3ECC6DA71977A2310017F252 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		3ECC6DA91977A2370017F252 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		3ECC6DAB1977A23E0017F252 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,10 +136,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E1ECAF619765824000AF544 /* libRHAddressBook.a in Frameworks */,
+				3ECC6DAC1977A23E0017F252 /* SystemConfiguration.framework in Frameworks */,
+				3ECC6DAA1977A2370017F252 /* StoreKit.framework in Frameworks */,
+				3ECC6DA81977A2310017F252 /* Social.framework in Frameworks */,
+				3ECC6DA61977A2220017F252 /* Security.framework in Frameworks */,
+				3ECC6DA41977A2170017F252 /* QuartzCore.framework in Frameworks */,
+				3ECC6DA21977A2100017F252 /* MobileCoreServices.framework in Frameworks */,
+				3ECC6DA01977A2050017F252 /* libz.dylib in Frameworks */,
+				3ECC6D9E1977A1FB0017F252 /* CoreLocation.framework in Frameworks */,
 				3E1ECA94197650D2000AF544 /* CoreGraphics.framework in Frameworks */,
+				3ECC6D9C1977A1EF0017F252 /* CFNetwork.framework in Frameworks */,
+				3ECC6D9A1977A1E90017F252 /* AudioToolbox.framework in Frameworks */,
+				3ECC6D981977A1E10017F252 /* Accounts.framework in Frameworks */,
+				3E1ECAF619765824000AF544 /* libRHAddressBook.a in Frameworks */,
 				3E1ECA96197650D2000AF544 /* UIKit.framework in Frameworks */,
 				3E1ECA92197650D2000AF544 /* Foundation.framework in Frameworks */,
+				3ECC6D961977A1C20017F252 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +191,18 @@
 		3E1ECA90197650D2000AF544 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3ECC6DAB1977A23E0017F252 /* SystemConfiguration.framework */,
+				3ECC6DA91977A2370017F252 /* StoreKit.framework */,
+				3ECC6DA71977A2310017F252 /* Social.framework */,
+				3ECC6DA51977A2220017F252 /* Security.framework */,
+				3ECC6DA31977A2170017F252 /* QuartzCore.framework */,
+				3ECC6DA11977A2100017F252 /* MobileCoreServices.framework */,
+				3ECC6D9F1977A2050017F252 /* libz.dylib */,
+				3ECC6D9D1977A1FB0017F252 /* CoreLocation.framework */,
+				3ECC6D9B1977A1EF0017F252 /* CFNetwork.framework */,
+				3ECC6D991977A1E90017F252 /* AudioToolbox.framework */,
+				3ECC6D971977A1E10017F252 /* Accounts.framework */,
+				3ECC6D951977A1C20017F252 /* Parse.framework */,
 				3E1ECA91197650D2000AF544 /* Foundation.framework */,
 				3E1ECA93197650D2000AF544 /* CoreGraphics.framework */,
 				3E1ECA95197650D2000AF544 /* UIKit.framework */,
@@ -540,6 +588,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "u.in/u.in-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -548,6 +600,7 @@
 					"include/**",
 				);
 				INFOPLIST_FILE = "u.in/u.in-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -562,6 +615,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "u.in/u.in-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -570,6 +627,7 @@
 					"include/**",
 				);
 				INFOPLIST_FILE = "u.in/u.in-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",

@@ -59,11 +59,6 @@
     }
     [defaults setObject:(NSArray *)hashlist forKey:@"hash"];
     [defaults synchronize];
-    NSLog(@"nsuserdefaults");
-    //NSLog(hashlist);
-    for (NSString *hash in hashlist) {
-        //NSLog([NSString stringWithFormat:@"%@ => %@", hash, [defaults objectForKey:hash] ]);
-    }
 }
 
 /*

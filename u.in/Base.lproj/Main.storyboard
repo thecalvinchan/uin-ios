@@ -52,17 +52,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="u in?" id="Jw4-Ow-ZZb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="KrJ-tv-RsC"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="KrJ-tv-RsC">
+                            <connections>
+                                <segue destination="e6e-Fs-fwO" kind="push" id="4YQ-Ld-rhq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="979" y="-152"/>
         </scene>
-        <!--View Controller - New Event-->
+        <!--New Event Controller - New Event-->
         <scene sceneID="ZuY-RX-Yd2">
             <objects>
-                <viewController id="e6e-Fs-fwO" sceneMemberID="viewController">
+                <viewController id="e6e-Fs-fwO" customClass="NewEventController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9No-9K-AOr"/>
                         <viewControllerLayoutGuide type="bottom" id="VNH-bc-I2o"/>
@@ -86,6 +90,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="jjf-nW-uh4" kind="push" identifier="eventToSelectFriends" id="Vsa-VI-sWR"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" text="Hey, Jamestown and I are thinking of heading over  to AX booth 111. u in? Click to edit..." translatesAutoresizingMaskIntoConstraints="NO" id="jCS-6V-StW">
                                 <rect key="frame" x="76" y="74" width="224" height="133"/>
@@ -103,10 +110,13 @@
                     <navigationItem key="navigationItem" title="New Event" id="QoK-jG-2Cl">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="4WL-Jh-C6b">
                             <connections>
-                                <segue destination="jjf-nW-uh4" kind="push" id="fIs-6Z-0gA"/>
+                                <segue destination="jjf-nW-uh4" kind="push" identifier="eventToSelectFriends" id="fIs-6Z-0gA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="inviteMessage" destination="jCS-6V-StW" id="MtL-0q-pIg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KpY-vf-SrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -163,7 +173,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Friends" id="7jB-qA-dfP">
-                        <barButtonItem key="rightBarButtonItem" title="Send" id="ddg-G0-EkT"/>
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="ddg-G0-EkT">
+                            <connections>
+                                <action selector="sendInviteToFriends:" destination="jjf-nW-uh4" id="9lq-gf-DYe"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="t2k-BE-ugn" id="dX6-Kg-KaL"/>
@@ -356,4 +370,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="GMO-IX-RgM"/>
+        <segue reference="Vsa-VI-sWR"/>
+    </inferredMetricsTieBreakers>
 </document>

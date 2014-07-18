@@ -43,6 +43,7 @@
 		3ECC6DB21977A4820017F252 /* LogInController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DB11977A4820017F252 /* LogInController.m */; };
 		3ECC6DB51977A4C80017F252 /* SignUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DB41977A4C80017F252 /* SignUpController.m */; };
 		3ECC6DB71977A5B40017F252 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6DB61977A5B40017F252 /* FacebookSDK.framework */; };
+		3ECC6DBA1977AF750017F252 /* NewEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DB91977AF750017F252 /* NewEventController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +141,8 @@
 		3ECC6DB31977A4C80017F252 /* SignUpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignUpController.h; path = Controllers/SignUpController.h; sourceTree = "<group>"; };
 		3ECC6DB41977A4C80017F252 /* SignUpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignUpController.m; path = Controllers/SignUpController.m; sourceTree = "<group>"; };
 		3ECC6DB61977A5B40017F252 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		3ECC6DB81977AF750017F252 /* NewEventController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewEventController.h; path = Controllers/NewEventController.h; sourceTree = "<group>"; };
+		3ECC6DB91977AF750017F252 /* NewEventController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewEventController.m; path = Controllers/NewEventController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +303,8 @@
 				3ECC6DB11977A4820017F252 /* LogInController.m */,
 				3ECC6DB31977A4C80017F252 /* SignUpController.h */,
 				3ECC6DB41977A4C80017F252 /* SignUpController.m */,
+				3ECC6DB81977AF750017F252 /* NewEventController.h */,
+				3ECC6DB91977AF750017F252 /* NewEventController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -477,6 +482,7 @@
 				3E1ECAC819765353000AF544 /* Users.m in Sources */,
 				3ECC6DB21977A4820017F252 /* LogInController.m in Sources */,
 				3E1ECAA8197650D2000AF544 /* TableViewController.m in Sources */,
+				3ECC6DBA1977AF750017F252 /* NewEventController.m in Sources */,
 				3E1ECAA2197650D2000AF544 /* AppDelegate.m in Sources */,
 				3ECC6DB51977A4C80017F252 /* SignUpController.m in Sources */,
 				3E1ECA9E197650D2000AF544 /* main.m in Sources */,
@@ -551,7 +557,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Calvin CHAN (AX6XN493CJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Calvin CHAN (AX6XN493CJ)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -589,7 +596,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Calvin CHAN (AX6XN493CJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Calvin CHAN (AX6XN493CJ)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -610,6 +618,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Calvin CHAN (AX6XN493CJ)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -638,6 +647,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Calvin CHAN (AX6XN493CJ)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

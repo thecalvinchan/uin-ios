@@ -39,6 +39,7 @@
 - (IBAction)addContactsToFriends:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSMutableArray *hashlist = [[defaults objectForKey:@"hash"] mutableCopy];
+    int newFriends = 0;
     if ([hashlist count] <=0) {
         hashlist = [[NSMutableArray alloc] init];
     }
@@ -53,12 +54,19 @@
                 [defaults setObject:[person returnDictRepresentation] forKey:hash];
                 if (![hashlist containsObject:hash]) {
                     [hashlist addObject:hash];
+                    newFriends++;
                 }
             }
         }
     }
     [defaults setObject:(NSArray *)hashlist forKey:@"hash"];
     [defaults synchronize];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success"
+                                                    message:[NSString stringWithFormat:@"You've added %@ friends!",[NSNumber numberWithInt:newFriends]]
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 /*

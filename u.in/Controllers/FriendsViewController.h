@@ -9,5 +9,5 @@
 #import "TableViewController.h"
 
 @interface FriendsViewController : TableViewController
-
+@property (strong,nonatomic) NSString *inviteMessage;
 @end

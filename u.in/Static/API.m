@@ -7,6 +7,7 @@
 //
 
 #import "API.h"
+#import <Parse/Parse.h>
 #import "../Models/Users.h"
 
 @implementation API
@@ -20,6 +21,20 @@
         [friends setObject:friend forKey:hash];
     }
     return friends;
+}
+
++ (void)queryUpcomingEventsByCurrentUser:(id)observer :(SEL)callback {
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    query.cachePolicy = kPFCachePolicyNetworkElseCache;
+    [query whereKey:@"createdBy" equalTo:[PFUser currentUser]];
+    [query findObjectsInBackgroundWithTarget:observer selector:callback];
+}
+
++ (void)queryUpcomingInvitationsForCurrentUser:(id)observer :(SEL)callback {
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    query.cachePolicy = kPFCachePolicyNetworkElseCache;
+    [query whereKey:@"guestUsers" equalTo:[PFUser currentUser]];
+    [query findObjectsInBackgroundWithTarget:observer selector:callback];
 }
 
 @end

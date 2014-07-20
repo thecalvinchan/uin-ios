@@ -9,5 +9,8 @@
 #import "TableViewController.h"
 
 @interface FriendsViewController : TableViewController
-@property (strong,nonatomic) NSString *inviteMessage;
+@property (strong,nonatomic) NSString *eventTitle;
+@property (strong,nonatomic) NSString *location;
+@property (strong,nonatomic) NSString *message;
+@property (strong,nonatomic) NSDate *datetime;
 @end

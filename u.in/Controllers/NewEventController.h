@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewEventController : UIViewController
+@interface NewEventController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
 
 @end

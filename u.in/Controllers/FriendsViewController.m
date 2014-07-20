@@ -59,8 +59,14 @@
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,
                                              (unsigned long)NULL), ^(void) {
+        NSString *utc_date_time = [NSString stringWithFormat:@"%f",[self.datetime timeIntervalSinceReferenceDate] ];
+        
         PFObject *event = [PFObject objectWithClassName:@"Event"];
-        [event setObject:self.inviteMessage forKey:@"message"];
+        [event setObject:self.eventTitle forKey:@"title"];
+        [event setObject:self.location forKey:@"location"];
+        [event setObject:self.message forKey:@"message"];
+        [event setObject:utc_date_time forKey:@"time"];
+
         [event setObject:[PFUser currentUser] forKey:@"createdBy"];
         PFRelation *relation = [event relationForKey:@"guestUsers"];
         for (Users *user in guestUsers) {

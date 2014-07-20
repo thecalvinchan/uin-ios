@@ -45,6 +45,7 @@
 		3ECC6DB71977A5B40017F252 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6DB61977A5B40017F252 /* FacebookSDK.framework */; };
 		3ECC6DBA1977AF750017F252 /* NewEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DB91977AF750017F252 /* NewEventController.m */; };
 		3ECC6DBE197B458C0017F252 /* AddFriendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DBD197B458C0017F252 /* AddFriendsController.m */; };
+		3ECC6DC4197B541A0017F252 /* UpcomingEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DC3197B541A0017F252 /* UpcomingEventsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,8 @@
 		3ECC6DB91977AF750017F252 /* NewEventController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewEventController.m; path = Controllers/NewEventController.m; sourceTree = "<group>"; };
 		3ECC6DBC197B458C0017F252 /* AddFriendsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFriendsController.h; path = Controllers/AddFriendsController.h; sourceTree = "<group>"; };
 		3ECC6DBD197B458C0017F252 /* AddFriendsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFriendsController.m; path = Controllers/AddFriendsController.m; sourceTree = "<group>"; };
+		3ECC6DC2197B541A0017F252 /* UpcomingEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpcomingEventsViewController.h; path = Controllers/UpcomingEventsViewController.h; sourceTree = "<group>"; };
+		3ECC6DC3197B541A0017F252 /* UpcomingEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpcomingEventsViewController.m; path = Controllers/UpcomingEventsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +305,8 @@
 				3ECC6DBD197B458C0017F252 /* AddFriendsController.m */,
 				3E1ECACB19765473000AF544 /* FriendsViewController.h */,
 				3E1ECACC19765473000AF544 /* FriendsViewController.m */,
+				3ECC6DC2197B541A0017F252 /* UpcomingEventsViewController.h */,
+				3ECC6DC3197B541A0017F252 /* UpcomingEventsViewController.m */,
 				3E1ECAF719765C8E000AF544 /* ContactsViewController.h */,
 				3E1ECAF819765C8E000AF544 /* ContactsViewController.m */,
 				3ECC6DB01977A4820017F252 /* LogInController.h */,
@@ -491,6 +496,7 @@
 				3E1ECAA2197650D2000AF544 /* AppDelegate.m in Sources */,
 				3ECC6DB51977A4C80017F252 /* SignUpController.m in Sources */,
 				3E1ECA9E197650D2000AF544 /* main.m in Sources */,
+				3ECC6DC4197B541A0017F252 /* UpcomingEventsViewController.m in Sources */,
 				3ECC6DBE197B458C0017F252 /* AddFriendsController.m in Sources */,
 				3E1ECAD5197656CE000AF544 /* Contacts.m in Sources */,
 			);

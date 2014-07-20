@@ -10,4 +10,6 @@
 
 @interface API : NSObject
 + (NSDictionary *)returnFriendsForCurrentUser;
++ (void)queryUpcomingEventsByCurrentUser:(id)observer :(SEL)callback;
++ (void)queryUpcomingInvitationsForCurrentUser:(id)observer :(SEL)callback;
 @end

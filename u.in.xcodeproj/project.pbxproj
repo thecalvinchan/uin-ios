@@ -44,6 +44,7 @@
 		3ECC6DB51977A4C80017F252 /* SignUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DB41977A4C80017F252 /* SignUpController.m */; };
 		3ECC6DB71977A5B40017F252 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC6DB61977A5B40017F252 /* FacebookSDK.framework */; };
 		3ECC6DBA1977AF750017F252 /* NewEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DB91977AF750017F252 /* NewEventController.m */; };
+		3ECC6DBE197B458C0017F252 /* AddFriendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DBD197B458C0017F252 /* AddFriendsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,8 @@
 		3ECC6DB61977A5B40017F252 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		3ECC6DB81977AF750017F252 /* NewEventController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewEventController.h; path = Controllers/NewEventController.h; sourceTree = "<group>"; };
 		3ECC6DB91977AF750017F252 /* NewEventController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewEventController.m; path = Controllers/NewEventController.m; sourceTree = "<group>"; };
+		3ECC6DBC197B458C0017F252 /* AddFriendsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFriendsController.h; path = Controllers/AddFriendsController.h; sourceTree = "<group>"; };
+		3ECC6DBD197B458C0017F252 /* AddFriendsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFriendsController.m; path = Controllers/AddFriendsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +298,8 @@
 		3E1ECACE197654B8000AF544 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3ECC6DBC197B458C0017F252 /* AddFriendsController.h */,
+				3ECC6DBD197B458C0017F252 /* AddFriendsController.m */,
 				3E1ECACB19765473000AF544 /* FriendsViewController.h */,
 				3E1ECACC19765473000AF544 /* FriendsViewController.m */,
 				3E1ECAF719765C8E000AF544 /* ContactsViewController.h */,
@@ -486,6 +491,7 @@
 				3E1ECAA2197650D2000AF544 /* AppDelegate.m in Sources */,
 				3ECC6DB51977A4C80017F252 /* SignUpController.m in Sources */,
 				3E1ECA9E197650D2000AF544 /* main.m in Sources */,
+				3ECC6DBE197B458C0017F252 /* AddFriendsController.m in Sources */,
 				3E1ECAD5197656CE000AF544 /* Contacts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

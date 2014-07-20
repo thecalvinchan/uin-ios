@@ -187,10 +187,10 @@
             </objects>
             <point key="canvasLocation" x="1918" y="-152"/>
         </scene>
-        <!--View Controller - Add Friends-->
+        <!--Add Friends Controller - Add Friends-->
         <scene sceneID="9OQ-d4-52i">
             <objects>
-                <viewController id="OX2-UH-2Ko" sceneMemberID="viewController">
+                <viewController id="OX2-UH-2Ko" customClass="AddFriendsController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bXd-F8-Y7j"/>
                         <viewControllerLayoutGuide type="bottom" id="7Ww-dl-sWw"/>
@@ -208,7 +208,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Soa-WC-XZj" kind="push" id="Zy9-GN-2sm"/>
+                                    <action selector="addFriendFromContacts:" destination="OX2-UH-2Ko" eventType="touchUpInside" id="h1F-kK-LnS"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- or -" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISK-1G-goA">
@@ -232,11 +232,17 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addFriendFromUsername:" destination="OX2-UH-2Ko" eventType="touchUpInside" id="c8Z-u1-DhV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Friends" id="KNG-ai-bJP"/>
+                    <connections>
+                        <outlet property="usernameField" destination="b6D-c3-A52" id="j32-gE-bmh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azt-Xe-uhO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -260,7 +266,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="isp-xi-eo9" detailTextLabel="qcm-jJ-x2n" style="IBUITableViewCellStyleSubtitle" id="bui-9i-gSy">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bui-9i-gSy" id="Hyk-f8-fRe">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>

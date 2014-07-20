@@ -28,9 +28,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [API queryUpcomingEventsByCurrentUser:self :@selector(parseQueryDataForEventsByUser::)];
-    [API queryUpcomingInvitationsForCurrentUser:self :@selector(parseQueryDataForInvitationsForUser::)];
+    if ([PFUser currentUser]) {
+        [API queryUpcomingEventsByCurrentUser:self :@selector(parseQueryDataForEventsByUser::)];
+        [API queryUpcomingInvitationsForCurrentUser:self :@selector(parseQueryDataForInvitationsForUser::)];
+    }
     // Do any additional setup after loading the view.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if ([PFUser currentUser]) {
+        [API queryUpcomingEventsByCurrentUser:self :@selector(parseQueryDataForEventsByUser::)];
+        [API queryUpcomingInvitationsForCurrentUser:self :@selector(parseQueryDataForInvitationsForUser::)];
+    }
 }
 
 - (void)parseQueryDataForEventsByUser:(NSArray *)events :(NSError *)err {
@@ -151,6 +161,13 @@
     cell.detailTextLabel.text = [event objectForKey:@"createdBy"];
     
     return cell;
+}
+
+- (IBAction)inviteSentToFriends:(UIStoryboardSegue *)segue
+{
+    // do any clean up you want
+    [API queryUpcomingEventsByCurrentUser:self :@selector(parseQueryDataForEventsByUser::)];
+    [API queryUpcomingInvitationsForCurrentUser:self :@selector(parseQueryDataForInvitationsForUser::)];
 }
 
 /*

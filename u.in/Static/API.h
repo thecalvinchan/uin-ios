@@ -12,4 +12,6 @@
 + (NSDictionary *)returnFriendsForCurrentUser;
 + (void)queryUpcomingEventsByCurrentUser:(id)observer :(SEL)callback;
 + (void)queryUpcomingInvitationsForCurrentUser:(id)observer :(SEL)callback;
++ (void)addFriendForCurrentUser:(NSString *)friendUsername :(id)observer :(SEL)callback;
+
 @end

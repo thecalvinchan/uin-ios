@@ -63,6 +63,12 @@
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
     [self dismissViewControllerAnimated:YES completion:NULL];
+    // Associate the device with a user
+    if ([PFUser currentUser]) {
+        PFInstallation *installation = [PFInstallation currentInstallation];
+        installation[@"User"] = [PFUser currentUser];
+        [installation saveInBackground];
+    }
 }
 
 // Sent to the delegate when the log in attempt fails.

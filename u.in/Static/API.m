@@ -20,7 +20,13 @@
         Users *friend = [[Users alloc] initWithDict:[defaults objectForKey:hash]];
         [friends setObject:friend forKey:hash];
     }
-    return friends;
+    NSArray *parseFriends = [defaults objectForKey:@"parseFriends"];
+    NSMutableDictionary *returnData = [[NSMutableDictionary alloc] init];
+    [returnData setObject:friends forKey:@"contactsFriends"];
+    if (parseFriends) {
+        [returnData setObject:parseFriends forKey:@"parseFriends"];
+    }
+    return returnData;
 }
 
 + (void)queryUpcomingEventsByCurrentUser:(id)observer :(SEL)callback {
@@ -35,6 +41,12 @@
     query.cachePolicy = kPFCachePolicyNetworkElseCache;
     [query whereKey:@"guestUsers" equalTo:[PFUser currentUser]];
     [query findObjectsInBackgroundWithTarget:observer selector:callback];
+}
+
++ (void)addFriendForCurrentUser:(NSString *)friendUsername :(id)observer :(SEL)callback {
+    PFQuery *query = [PFUser query];
+    [query whereKey:@"username" equalTo:friendUsername];
+    [query getFirstObjectInBackgroundWithTarget:observer selector:callback];
 }
 
 @end

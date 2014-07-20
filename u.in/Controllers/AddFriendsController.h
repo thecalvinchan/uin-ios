@@ -10,6 +10,5 @@
 #import <AddressBook/AddressBook.h>
 #import <AddressBookUI/AddressBookUI.h>
 
-@interface AddFriendsController : UIViewController <ABPeoplePickerNavigationControllerDelegate>
-
+@interface AddFriendsController : UIViewController <ABPeoplePickerNavigationControllerDelegate, UITextFieldDelegate>
 @end

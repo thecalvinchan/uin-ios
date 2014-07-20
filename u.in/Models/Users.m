@@ -23,7 +23,7 @@
 }
 
 - (NSString *)returnUserHash {
-    if ([self.phoneNumbers count] > 0) {
+    if (self.phoneNumbers && [self.phoneNumbers count] > 0) {
         return [NSString stringWithFormat:@"%@ %@ %@",self.firstName,self.lastName,self.phoneNumbers[0] ];
     } else {
         return nil;
@@ -33,7 +33,7 @@
     NSMutableDictionary *userDict = [[NSMutableDictionary alloc] init];
     if (self.firstName) [userDict setObject:self.firstName forKey:@"firstName"];
     if (self.lastName) [userDict setObject:self.lastName forKey:@"lastName"];
-    if (self.phoneNumbers) [userDict setObject:self.phoneNumbers forKey:@"phoneNumbers"];
+    if ([self.phoneNumbers count] > 0) [userDict setObject:self.phoneNumbers forKey:@"phoneNumbers"];
     if (self.username) [userDict setObject:self.username forKey:@"username"];
     return userDict;
 }

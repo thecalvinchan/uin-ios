@@ -46,6 +46,7 @@
 		3ECC6DBA1977AF750017F252 /* NewEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DB91977AF750017F252 /* NewEventController.m */; };
 		3ECC6DBE197B458C0017F252 /* AddFriendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DBD197B458C0017F252 /* AddFriendsController.m */; };
 		3ECC6DC4197B541A0017F252 /* UpcomingEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DC3197B541A0017F252 /* UpcomingEventsViewController.m */; };
+		3ECC6DC7197BAF0F0017F252 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DC6197BAF0F0017F252 /* EventViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,8 @@
 		3ECC6DBD197B458C0017F252 /* AddFriendsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFriendsController.m; path = Controllers/AddFriendsController.m; sourceTree = "<group>"; };
 		3ECC6DC2197B541A0017F252 /* UpcomingEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpcomingEventsViewController.h; path = Controllers/UpcomingEventsViewController.h; sourceTree = "<group>"; };
 		3ECC6DC3197B541A0017F252 /* UpcomingEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpcomingEventsViewController.m; path = Controllers/UpcomingEventsViewController.m; sourceTree = "<group>"; };
+		3ECC6DC5197BAF0F0017F252 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventViewController.h; path = Controllers/EventViewController.h; sourceTree = "<group>"; };
+		3ECC6DC6197BAF0F0017F252 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventViewController.m; path = Controllers/EventViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +304,8 @@
 		3E1ECACE197654B8000AF544 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3ECC6DC5197BAF0F0017F252 /* EventViewController.h */,
+				3ECC6DC6197BAF0F0017F252 /* EventViewController.m */,
 				3ECC6DBC197B458C0017F252 /* AddFriendsController.h */,
 				3ECC6DBD197B458C0017F252 /* AddFriendsController.m */,
 				3E1ECACB19765473000AF544 /* FriendsViewController.h */,
@@ -497,6 +502,7 @@
 				3ECC6DB51977A4C80017F252 /* SignUpController.m in Sources */,
 				3E1ECA9E197650D2000AF544 /* main.m in Sources */,
 				3ECC6DC4197B541A0017F252 /* UpcomingEventsViewController.m in Sources */,
+				3ECC6DC7197BAF0F0017F252 /* EventViewController.m in Sources */,
 				3ECC6DBE197B458C0017F252 /* AddFriendsController.m in Sources */,
 				3E1ECAD5197656CE000AF544 /* Contacts.m in Sources */,
 			);

@@ -33,6 +33,7 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
     query.cachePolicy = kPFCachePolicyNetworkElseCache;
     [query whereKey:@"createdBy" equalTo:[PFUser currentUser]];
+    [query includeKey:@"createdBy"];
     [query findObjectsInBackgroundWithTarget:observer selector:callback];
 }
 
@@ -40,6 +41,7 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
     query.cachePolicy = kPFCachePolicyNetworkElseCache;
     [query whereKey:@"guestUsers" equalTo:[PFUser currentUser]];
+    [query includeKey:@"createdBy"];
     [query findObjectsInBackgroundWithTarget:observer selector:callback];
 }
 

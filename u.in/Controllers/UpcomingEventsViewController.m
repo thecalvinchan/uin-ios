@@ -7,6 +7,7 @@
 //
 
 #import "UpcomingEventsViewController.h"
+#import "EventViewController.h"
 #import <Parse/Parse.h>
 #import "../Static/API.h"
 
@@ -53,6 +54,11 @@
         [alert show];
         return;
     }
+    dispatch_async(dispatch_get_main_queue(), ^(void) {
+        [self.tableData setValue:(NSArray *)events forKey:@"eventsByUser"];
+        [self.tableView reloadData];
+    });
+    return;
     NSMutableArray *upcomingEvents = [[NSMutableArray alloc] init];
     for (PFObject *event in events) {
         NSMutableDictionary *e = [[NSMutableDictionary alloc] init];
@@ -89,6 +95,11 @@
         [alert show];
         return;
     }
+    dispatch_async(dispatch_get_main_queue(), ^(void) {
+        [self.tableData setValue:(NSArray *)events forKey:@"invitationsForUser"];
+        [self.tableView reloadData];
+    });
+    return;
     NSMutableArray *upcomingEvents = [[NSMutableArray alloc] init];
     for (PFObject *event in events) {
         NSMutableDictionary *e = [[NSMutableDictionary alloc] init];
@@ -158,9 +169,13 @@
     }
     NSDictionary *event = data[indexPath.row];
     cell.textLabel.text = [event objectForKey:@"title"];
-    cell.detailTextLabel.text = [event objectForKey:@"createdBy"];
+    cell.detailTextLabel.text = [[event objectForKey:@"createdBy"] objectForKey:@"username"];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
 }
 
 - (IBAction)inviteSentToFriends:(UIStoryboardSegue *)segue
@@ -168,6 +183,25 @@
     // do any clean up you want
     [API queryUpcomingEventsByCurrentUser:self :@selector(parseQueryDataForEventsByUser::)];
     [API queryUpcomingInvitationsForCurrentUser:self :@selector(parseQueryDataForInvitationsForUser::)];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"eventDetails"]) {
+        if ([segue.destinationViewController isKindOfClass:[EventViewController class]]) {
+            NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+            NSInteger section = indexPath.section;
+            NSInteger index = indexPath.row;
+            PFObject *event;
+            if (section == 0) {
+                event = [[self.tableData objectForKey:@"eventsByUser"] objectAtIndex:index];
+            } else {
+                event = [[self.tableData objectForKey:@"invitationsForUser"] objectAtIndex:index];
+            }
+            EventViewController *eventDetailsVC = (EventViewController *)segue.destinationViewController;
+            NSLog(@"%@",[event objectForKey:@"title"]);
+            eventDetailsVC.event = event;
+        }
+    }
 }
 
 /*

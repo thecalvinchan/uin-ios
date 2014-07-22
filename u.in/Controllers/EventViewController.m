@@ -57,7 +57,7 @@
         return true;
     }
     for (PFObject *attendee in self.attendingUsers) {
-        if ([[PFUser currentUser] objectId] == [attendee objectId]) {
+        if ([[[PFUser currentUser] objectId] isEqualToString:[attendee objectId]]) {
             return true;
         }
     }
@@ -150,17 +150,27 @@
     }
     PFRelation *relation = [self.event relationforKey:@"attendingUsers"];
     if ([sender isSelected]) {
-        [sender setSelected:NO];
         [relation removeObject:[PFUser currentUser]];
     } else {
-        [sender setSelected:YES];
         [relation addObject:[PFUser currentUser]];
     }
     [self.event saveInBackgroundWithBlock:^(BOOL succeeded, NSError *err) {
         if (succeeded) {
             dispatch_async(dispatch_get_main_queue(), ^(void) {
                 [self loadAttendingUsers];
+                if ([sender isSelected]) {
+                    [sender setSelected:NO];
+                } else {
+                    [sender setSelected:YES];
+                }
             });
+            PFQuery *attendingUsers = [relation query];
+            [attendingUsers whereKey:@"objectId" notEqualTo:[[PFUser currentUser] objectId]];
+            PFQuery *pushQuery = [PFInstallation query];
+            [pushQuery whereKey:@"deviceType" equalTo:@"ios"];
+            [pushQuery whereKey:@"User" matchesQuery:attendingUsers];
+            [PFPush sendPushMessageToQueryInBackground:pushQuery
+                                           withMessage:@"Hello World!"];
         }
     }];
 }

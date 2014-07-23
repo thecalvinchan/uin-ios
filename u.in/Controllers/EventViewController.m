@@ -74,11 +74,6 @@
             return;
         }
         NSMutableArray *attendees = [objects mutableCopy];
-        if ([[[PFUser currentUser] objectId] isEqualToString:[[self.event objectForKey:@"createdBy"] objectId]]) {
-            NSLog(@"%@ %@",[[PFUser currentUser] objectId],[[self.event objectForKey:@"createdBy"] objectId]);
-            NSLog(@"%@",attendees);
-            [attendees insertObject:[PFUser currentUser] atIndex:0];
-        }
         self.attendingUsers = attendees;
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             if ([self checkAttending]) {
@@ -150,20 +145,18 @@
     }
     PFRelation *relation = [self.event relationforKey:@"attendingUsers"];
     if ([sender isSelected]) {
+        [sender setSelected:NO];
         [relation removeObject:[PFUser currentUser]];
     } else {
+        [sender setSelected:YES];
         [relation addObject:[PFUser currentUser]];
     }
     [self.event saveInBackgroundWithBlock:^(BOOL succeeded, NSError *err) {
         if (succeeded) {
             dispatch_async(dispatch_get_main_queue(), ^(void) {
                 [self loadAttendingUsers];
-                if ([sender isSelected]) {
-                    [sender setSelected:NO];
-                } else {
-                    [sender setSelected:YES];
-                }
             });
+            /**
             PFQuery *attendingUsers = [relation query];
             [attendingUsers whereKey:@"objectId" notEqualTo:[[PFUser currentUser] objectId]];
             PFQuery *pushQuery = [PFInstallation query];
@@ -171,6 +164,7 @@
             [pushQuery whereKey:@"User" matchesQuery:attendingUsers];
             [PFPush sendPushMessageToQueryInBackground:pushQuery
                                            withMessage:@"Hello World!"];
+             **/
         }
     }];
 }

@@ -26,6 +26,7 @@
     if (parseFriends) {
         [returnData setObject:parseFriends forKey:@"parseFriends"];
     }
+    NSLog(@"returnFriendsForCurrentUser");
     return returnData;
 }
 

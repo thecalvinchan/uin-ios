@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3E1ECA8D197650D2000AF544"
                BuildableName = "u.in.app"
-               BlueprintName = "u.in"
+               BlueprintName = "raenstorm"
                ReferencedContainer = "container:u.in.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3E1ECA8D197650D2000AF544"
             BuildableName = "u.in.app"
-            BlueprintName = "u.in"
+            BlueprintName = "raenstorm"
             ReferencedContainer = "container:u.in.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3E1ECA8D197650D2000AF544"
             BuildableName = "u.in.app"
-            BlueprintName = "u.in"
+            BlueprintName = "raenstorm"
             ReferencedContainer = "container:u.in.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -81,7 +81,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3E1ECA8D197650D2000AF544"
             BuildableName = "u.in.app"
-            BlueprintName = "u.in"
+            BlueprintName = "raenstorm"
             ReferencedContainer = "container:u.in.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

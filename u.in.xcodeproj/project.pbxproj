@@ -47,6 +47,7 @@
 		3ECC6DBE197B458C0017F252 /* AddFriendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DBD197B458C0017F252 /* AddFriendsController.m */; };
 		3ECC6DC4197B541A0017F252 /* UpcomingEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DC3197B541A0017F252 /* UpcomingEventsViewController.m */; };
 		3ECC6DC7197BAF0F0017F252 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DC6197BAF0F0017F252 /* EventViewController.m */; };
+		3ECC6DCA197F7AB60017F252 /* AllFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC6DC9197F7AB60017F252 /* AllFriendsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +153,8 @@
 		3ECC6DC3197B541A0017F252 /* UpcomingEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpcomingEventsViewController.m; path = Controllers/UpcomingEventsViewController.m; sourceTree = "<group>"; };
 		3ECC6DC5197BAF0F0017F252 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventViewController.h; path = Controllers/EventViewController.h; sourceTree = "<group>"; };
 		3ECC6DC6197BAF0F0017F252 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventViewController.m; path = Controllers/EventViewController.m; sourceTree = "<group>"; };
+		3ECC6DC8197F7AB60017F252 /* AllFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllFriendsViewController.h; path = Controllers/AllFriendsViewController.h; sourceTree = "<group>"; };
+		3ECC6DC9197F7AB60017F252 /* AllFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllFriendsViewController.m; path = Controllers/AllFriendsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +313,8 @@
 				3ECC6DBD197B458C0017F252 /* AddFriendsController.m */,
 				3E1ECACB19765473000AF544 /* FriendsViewController.h */,
 				3E1ECACC19765473000AF544 /* FriendsViewController.m */,
+				3ECC6DC8197F7AB60017F252 /* AllFriendsViewController.h */,
+				3ECC6DC9197F7AB60017F252 /* AllFriendsViewController.m */,
 				3ECC6DC2197B541A0017F252 /* UpcomingEventsViewController.h */,
 				3ECC6DC3197B541A0017F252 /* UpcomingEventsViewController.m */,
 				3E1ECAF719765C8E000AF544 /* ContactsViewController.h */,
@@ -358,9 +363,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3E1ECA8D197650D2000AF544 /* u.in */ = {
+		3E1ECA8D197650D2000AF544 /* raenstorm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3E1ECAC0197650D2000AF544 /* Build configuration list for PBXNativeTarget "u.in" */;
+			buildConfigurationList = 3E1ECAC0197650D2000AF544 /* Build configuration list for PBXNativeTarget "raenstorm" */;
 			buildPhases = (
 				3E1ECA8A197650D2000AF544 /* Sources */,
 				3E1ECA8B197650D2000AF544 /* Frameworks */,
@@ -371,7 +376,7 @@
 			dependencies = (
 				3E1ECAF51976581A000AF544 /* PBXTargetDependency */,
 			);
-			name = u.in;
+			name = raenstorm;
 			productName = u.in;
 			productReference = 3E1ECA8E197650D2000AF544 /* u.in.app */;
 			productType = "com.apple.product-type.application";
@@ -427,7 +432,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				3E1ECA8D197650D2000AF544 /* u.in */,
+				3E1ECA8D197650D2000AF544 /* raenstorm */,
 				3E1ECAAE197650D2000AF544 /* u.inTests */,
 			);
 		};
@@ -498,6 +503,7 @@
 				3ECC6DB21977A4820017F252 /* LogInController.m in Sources */,
 				3E1ECAA8197650D2000AF544 /* TableViewController.m in Sources */,
 				3ECC6DBA1977AF750017F252 /* NewEventController.m in Sources */,
+				3ECC6DCA197F7AB60017F252 /* AllFriendsViewController.m in Sources */,
 				3E1ECAA2197650D2000AF544 /* AppDelegate.m in Sources */,
 				3ECC6DB51977A4C80017F252 /* SignUpController.m in Sources */,
 				3E1ECA9E197650D2000AF544 /* main.m in Sources */,
@@ -521,7 +527,7 @@
 /* Begin PBXTargetDependency section */
 		3E1ECAB5197650D2000AF544 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3E1ECA8D197650D2000AF544 /* u.in */;
+			target = 3E1ECA8D197650D2000AF544 /* raenstorm */;
 			targetProxy = 3E1ECAB4197650D2000AF544 /* PBXContainerItemProxy */;
 		};
 		3E1ECAF51976581A000AF544 /* PBXTargetDependency */ = {
@@ -741,7 +747,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3E1ECAC0197650D2000AF544 /* Build configuration list for PBXNativeTarget "u.in" */ = {
+		3E1ECAC0197650D2000AF544 /* Build configuration list for PBXNativeTarget "raenstorm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E1ECAC1197650D2000AF544 /* Debug */,

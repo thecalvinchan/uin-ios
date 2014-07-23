@@ -19,8 +19,11 @@
 
 // ABSTRACT OVERRIDE
 
-- (NSDictionary *)loadTableData {
-    return [API returnFriendsForCurrentUser];
+- (void)loadTableData {
+    self.tableData = [API returnFriendsForCurrentUser];
+    NSLog(@"%@",self.tableData);
+    NSLog(@"loadTableData");
+    [self.tableView reloadData];
 }
 
 // END ABSTRACT OVERRIDE
@@ -29,6 +32,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,6 +83,8 @@
         [event setObject:utc_date_time forKey:@"time"];
 
         [event setObject:[PFUser currentUser] forKey:@"createdBy"];
+        PFRelation *attendingUsersRelation = [event relationForKey:@"attendingUsers"];
+        [attendingUsersRelation addObject:[PFUser currentUser]];
         PFRelation *relation = [event relationForKey:@"guestUsers"];
         for (NSString *user in guestUsers) {
             PFQuery *query = [PFUser query];

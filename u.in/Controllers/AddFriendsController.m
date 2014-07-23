@@ -45,7 +45,7 @@
     [relation addObject:friend];
     [user saveInBackground];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSMutableArray *parseFriends = [defaults objectForKey:@"parseFriends"];
+    NSMutableArray *parseFriends = [[defaults objectForKey:@"parseFriends"] mutableCopy];
     if (!parseFriends) {
         parseFriends = [[NSMutableArray alloc] init];
     }

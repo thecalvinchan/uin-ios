@@ -16,8 +16,7 @@
 
 // ABSTRACT
 
-- (NSDictionary *)loadTableData {
-    return nil;
+- (void)loadTableData {
 }
 
 // END ABSTRACT
@@ -25,12 +24,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableData = [self loadTableData];
+    [self loadTableData];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    self.tableData = [self loadTableData];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self loadTableData];
+    NSLog(@"viewWillAppear");
 }
 
 - (void)didReceiveMemoryWarning
